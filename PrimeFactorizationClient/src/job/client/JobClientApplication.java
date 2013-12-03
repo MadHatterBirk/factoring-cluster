@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.rmi.RemoteException;
+import job.server.JobServer;
 
 /**
  * Creates a JobClient and runs it.
@@ -20,10 +21,10 @@ public class JobClientApplication {
         System.setProperty("java.rmi.server.useCodebaseOnly", "false");
         
         //Set the codebase for the client
-//        String codebaseServer = JobClient.class.getProtectionDomain().getCodeSource().getLocation().toString();
-//        String codebaseShared = JobServer.class.getProtectionDomain().getCodeSource().getLocation().toString();
-//        System.out.println("\nClient URL : " + codebaseServer);
-//        System.out.println("\nShared URL : " + codebaseShared);
+        String codebaseServer = JobClient.class.getProtectionDomain().getCodeSource().getLocation().toString();
+        String codebaseShared = JobServer.class.getProtectionDomain().getCodeSource().getLocation().toString();
+        System.out.println("\nClient URL : " + codebaseServer);
+        System.out.println("\nShared URL : " + codebaseShared);
 //        System.setProperty ("java.rmi.server.codebase", codebaseServer + " " + codebaseShared);
 
         // Create a simple security file in a known location, and use that

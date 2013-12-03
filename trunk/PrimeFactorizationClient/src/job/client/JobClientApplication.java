@@ -4,9 +4,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.rmi.RMISecurityManager;
 import java.rmi.RemoteException;
-import job.server.JobServer;
 
 /**
  * Creates a JobClient and runs it.

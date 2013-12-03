@@ -22,11 +22,11 @@ public class JobClientApplication {
         System.setProperty("java.rmi.server.useCodebaseOnly", "false");
         
         //Set the codebase for the client
-        String codebaseServer = JobClient.class.getProtectionDomain().getCodeSource().getLocation().toString();
-        String codebaseShared = JobServer.class.getProtectionDomain().getCodeSource().getLocation().toString();
-        System.out.println("\nClient URL : " + codebaseServer);
-        System.out.println("\nShared URL : " + codebaseShared);
-        System.setProperty ("java.rmi.server.codebase", codebaseServer + " " + codebaseShared);
+//        String codebaseServer = JobClient.class.getProtectionDomain().getCodeSource().getLocation().toString();
+//        String codebaseShared = JobServer.class.getProtectionDomain().getCodeSource().getLocation().toString();
+//        System.out.println("\nClient URL : " + codebaseServer);
+//        System.out.println("\nShared URL : " + codebaseShared);
+//        System.setProperty ("java.rmi.server.codebase", codebaseServer + " " + codebaseShared);
 
         // Create a simple security file in a known location, and use that
         final String POLICY_FILE_CONTENT = "grant {\n"
